@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integritetspolicy – SpecEdTools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a href="index.html" class="brand">SpecEdTools</a>
+    <nav>
+      <a href="integritet.html">Integritet</a>
+      <a href="villkor.html">Villkor</a>
+      <a href="privacy.html">English</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<h1>Integritetspolicy</h1>
+<div class="meta">
+  <p><strong>Senast uppdaterad:</strong> 2026-04-17</p>
+  <p><strong>Personuppgiftsansvarig:</strong> [DITT FULLSTÄNDIGA NAMN] (privatperson), [POSTADRESS]</p>
+  <p><strong>Kontakt:</strong> <a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a></p>
+</div>
+
+<p>SpecEdTools ("appen", "vi") är ett verktyg för pedagoger och vårdnadshavare att skapa anpassat undervisningsmaterial för elever med särskilda behov (t.ex. dyslexi, DLD, autism). Denna policy beskriver vilka personuppgifter vi behandlar, varför, och dina rättigheter enligt GDPR.</p>
+
+<h2>1. Vilka uppgifter vi behandlar</h2>
+<h3>Konto (om du registrerar dig)</h3>
+<ul>
+  <li>E-postadress</li>
+  <li>Krypterat lösenord (hanteras av Firebase Authentication)</li>
+</ul>
+<p>Du kan också använda appen anonymt utan att skapa konto.</p>
+
+<h3>Innehåll du skapar</h3>
+<ul>
+  <li>Arbetsblad och genererat undervisningsmaterial (sparas i Firestore kopplat till ditt konto)</li>
+  <li>Ämnesval, årskurs, kursplan och eventuellt skannad text som skickas till vår genereringstjänst</li>
+</ul>
+
+<h3>Tekniska uppgifter</h3>
+<ul>
+  <li>Anonymt installations-ID (lagras lokalt på enheten för att migrera material vid inloggning)</li>
+  <li>Köpkvitton via Apple StoreKit (vi ser endast prenumerationsstatus, inte betalkortsuppgifter)</li>
+</ul>
+
+<h3>Vi samlar INTE in</h3>
+<ul>
+  <li>Användningsanalys (Firebase Analytics är avstängt)</li>
+  <li>Kraschrapporter (Crashlytics är avstängt)</li>
+  <li>Platsdata</li>
+  <li>Kontakter, kalender eller annan enhetsinformation</li>
+</ul>
+
+<h2>2. Kamera och bildbehandling</h2>
+<p>När du skannar ett dokument:</p>
+<ul>
+  <li>Bilden bearbetas <strong>lokalt på din enhet</strong> med Apples Vision-ramverk (<code>VNRecognizeTextRequest</code>)</li>
+  <li><strong>Bilden lämnar aldrig din enhet</strong></li>
+  <li>Endast den extraherade texten kan, om du väljer att generera material, skickas till vår tjänst</li>
+</ul>
+
+<h2>3. Var dina uppgifter behandlas</h2>
+<table>
+  <thead><tr><th>Tjänst</th><th>Ändamål</th><th>Plats</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase Authentication</td><td>Inloggning</td><td>EU (europe-west1)</td></tr>
+    <tr><td>Cloud Firestore</td><td>Lagring av arbetsblad</td><td>EU (europe-west1)</td></tr>
+    <tr><td>Cloud Functions</td><td>Materialgenerering</td><td>EU (europe-west1)</td></tr>
+    <tr><td>OpenAI API</td><td>AI-genererat undervisningsmaterial</td><td>USA</td></tr>
+    <tr><td>Apple StoreKit</td><td>Prenumerationer</td><td>Apple</td></tr>
+  </tbody>
+</table>
+<p><strong>OpenAI:</strong> Den text som skickas (kursplanstext, ämne, eventuellt skannad text) behandlas av OpenAI enligt deras <a href="https://openai.com/policies/api-data-usage-policies">API-villkor</a>. OpenAI använder enligt avtal <strong>inte</strong> API-data för att träna modeller. Överföring till USA sker med stöd av EU-kommissionens standardavtalsklausuler (SCC).</p>
+
+<h2>4. Rättslig grund (GDPR art. 6)</h2>
+<ul>
+  <li><strong>Avtal:</strong> behandling av kontouppgifter och innehåll du skapar</li>
+  <li><strong>Berättigat intresse:</strong> anonym användning utan konto</li>
+  <li><strong>Samtycke:</strong> när du aktivt skickar text till AI-genereringen</li>
+</ul>
+
+<h2>5. Lagringstid</h2>
+<ul>
+  <li><strong>Konto och arbetsblad:</strong> så länge ditt konto är aktivt. Raderas när du tar bort kontot via inställningar.</li>
+  <li><strong>Anonyma sessioner:</strong> material sparas lokalt på enheten tills du raderar appen</li>
+  <li><strong>Loggar i Cloud Functions:</strong> högst 30 dagar</li>
+</ul>
+
+<h2>6. Dina rättigheter</h2>
+<p>Enligt GDPR har du rätt att:</p>
+<ul>
+  <li>Få tillgång till dina uppgifter</li>
+  <li>Rätta felaktiga uppgifter</li>
+  <li>Radera dina uppgifter ("rätten att bli glömd") – via "Radera konto" i appen</li>
+  <li>Begära dataportabilitet</li>
+  <li>Invända mot behandling</li>
+  <li>Lämna klagomål till <strong>Integritetsskyddsmyndigheten (IMY)</strong>, <a href="https://www.imy.se">imy.se</a></li>
+</ul>
+<p>Kontakta <a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a> för att utöva dina rättigheter.</p>
+
+<h2>7. Barn</h2>
+<p>SpecEdTools riktar sig till <strong>pedagoger och vårdnadshavare</strong>, inte direkt till barn under 13 år. Innehåll genereras för pedagogiskt bruk men appen är inte avsedd att användas självständigt av barn. Om material används av barn ansvarar vuxen användare för att inte skicka identifierande personuppgifter om barnet till AI-tjänsten.</p>
+
+<h2>8. Säkerhet</h2>
+<ul>
+  <li>All trafik är krypterad (HTTPS/TLS)</li>
+  <li>Lösenord lagras hashat av Firebase Authentication</li>
+  <li>Åtkomst till Firestore styrs av regler som endast ger dig tillgång till ditt eget innehåll</li>
+</ul>
+
+<h2>9. Ändringar</h2>
+<p>Vid större ändringar av policyn meddelas du i appen eller via e-post (om du har konto). Senast uppdaterat datum visas överst.</p>
+
+<h2>10. Kontakt</h2>
+<p>[DITT FULLSTÄNDIGA NAMN]<br>
+<a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a></p>
+</main>
+<footer>
+  &copy; <span id="y"></span> SpecEdTools ·
+  <a href="integritet.html">Integritet</a> ·
+  <a href="villkor.html">Villkor</a> ·
+  <a href="mailto:support@specedtools.org">support@specedtools.org</a>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

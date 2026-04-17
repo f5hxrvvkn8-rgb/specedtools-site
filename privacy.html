@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – SpecEdTools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a href="index.html" class="brand">SpecEdTools</a>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="integritet.html">Svenska</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<h1>Privacy Policy</h1>
+<div class="meta">
+  <p><strong>Last updated:</strong> 2026-04-17</p>
+  <p><strong>Data Controller:</strong> [YOUR FULL NAME] (private individual), [POSTAL ADDRESS]</p>
+  <p><strong>Contact:</strong> <a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a></p>
+</div>
+
+<p>SpecEdTools ("the app", "we") is a tool for educators and caregivers to create adapted learning materials for students with special needs (e.g. dyslexia, DLD, autism). This policy describes what personal data we process, why, and your rights under the GDPR.</p>
+
+<h2>1. Data we process</h2>
+<h3>Account (if you register)</h3>
+<ul>
+  <li>Email address</li>
+  <li>Hashed password (handled by Firebase Authentication)</li>
+</ul>
+<p>You can also use the app anonymously without creating an account.</p>
+
+<h3>Content you create</h3>
+<ul>
+  <li>Worksheets and generated learning material (stored in Firestore linked to your account)</li>
+  <li>Subject selections, grade level, curriculum, and optionally scanned text sent to our generation service</li>
+</ul>
+
+<h3>Technical data</h3>
+<ul>
+  <li>Anonymous installation ID (stored locally on the device to migrate material when you sign in)</li>
+  <li>Purchase receipts via Apple StoreKit (we only see subscription status, not payment card details)</li>
+</ul>
+
+<h3>We do NOT collect</h3>
+<ul>
+  <li>Usage analytics (Firebase Analytics is disabled)</li>
+  <li>Crash reports (Crashlytics is disabled)</li>
+  <li>Location data</li>
+  <li>Contacts, calendar or other device information</li>
+</ul>
+
+<h2>2. Camera and image processing</h2>
+<p>When you scan a document:</p>
+<ul>
+  <li>The image is processed <strong>locally on your device</strong> using Apple's Vision framework (<code>VNRecognizeTextRequest</code>)</li>
+  <li><strong>The image never leaves your device</strong></li>
+  <li>Only the extracted text may, if you choose to generate material, be sent to our service</li>
+</ul>
+
+<h2>3. Where your data is processed</h2>
+<table>
+  <thead><tr><th>Service</th><th>Purpose</th><th>Location</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase Authentication</td><td>Sign-in</td><td>EU (europe-west1)</td></tr>
+    <tr><td>Cloud Firestore</td><td>Worksheet storage</td><td>EU (europe-west1)</td></tr>
+    <tr><td>Cloud Functions</td><td>Material generation</td><td>EU (europe-west1)</td></tr>
+    <tr><td>OpenAI API</td><td>AI-generated learning material</td><td>USA</td></tr>
+    <tr><td>Apple StoreKit</td><td>Subscriptions</td><td>Apple</td></tr>
+  </tbody>
+</table>
+<p><strong>OpenAI:</strong> The text sent (curriculum text, subject, optionally scanned text) is processed by OpenAI under their <a href="https://openai.com/policies/api-data-usage-policies">API terms</a>. Per agreement, OpenAI does <strong>not</strong> use API data to train models. Transfers to the USA are made under the EU Commission's Standard Contractual Clauses (SCC).</p>
+
+<h2>4. Legal basis (GDPR Art. 6)</h2>
+<ul>
+  <li><strong>Contract:</strong> processing of account data and content you create</li>
+  <li><strong>Legitimate interest:</strong> anonymous use without an account</li>
+  <li><strong>Consent:</strong> when you actively send text to AI generation</li>
+</ul>
+
+<h2>5. Retention</h2>
+<ul>
+  <li><strong>Account and worksheets:</strong> as long as your account is active. Deleted when you remove your account in settings.</li>
+  <li><strong>Anonymous sessions:</strong> material is stored locally on your device until you delete the app</li>
+  <li><strong>Cloud Functions logs:</strong> at most 30 days</li>
+</ul>
+
+<h2>6. Your rights</h2>
+<p>Under the GDPR you have the right to:</p>
+<ul>
+  <li>Access your data</li>
+  <li>Rectify inaccurate data</li>
+  <li>Erase your data ("right to be forgotten") – via "Delete account" in the app</li>
+  <li>Request data portability</li>
+  <li>Object to processing</li>
+  <li>Lodge a complaint with the <strong>Swedish Authority for Privacy Protection (IMY)</strong>, <a href="https://www.imy.se">imy.se</a>, or your local supervisory authority</li>
+</ul>
+<p>Contact <a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a> to exercise your rights.</p>
+
+<h2>7. Children</h2>
+<p>SpecEdTools is intended for <strong>educators and caregivers</strong>, not directly for children under 13. Content is generated for educational use, but the app is not intended to be used independently by children. If material is used by children, the adult user is responsible for not sending identifying personal data about the child to the AI service.</p>
+
+<h2>8. Security</h2>
+<ul>
+  <li>All traffic is encrypted (HTTPS/TLS)</li>
+  <li>Passwords are stored hashed by Firebase Authentication</li>
+  <li>Access to Firestore is governed by rules that only grant you access to your own content</li>
+</ul>
+
+<h2>9. Changes</h2>
+<p>For material changes to this policy you will be notified in the app or by email (if you have an account). The most recent update date is shown at the top.</p>
+
+<h2>10. Contact</h2>
+<p>[YOUR FULL NAME]<br>
+<a href="mailto:privacy@specedtools.org">privacy@specedtools.org</a></p>
+</main>
+<footer>
+  &copy; <span id="y"></span> SpecEdTools ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="terms.html">Terms</a> ·
+  <a href="mailto:support@specedtools.org">support@specedtools.org</a>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
